@@ -52,3 +52,5 @@ $ python minitheater_demo.py
 {"portName": "Vlan1", "status": "up", "adminStatus": "UP", "device": "c9000v-helsinki.dcloud.cisco.com"}
 ```
 
+## Author
+Juulia Santala (jusantal@cisco.com)

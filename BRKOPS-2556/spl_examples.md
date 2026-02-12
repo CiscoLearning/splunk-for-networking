@@ -2,6 +2,13 @@
 
 Please refer to the following to get started with building your own Splunk dashboard. Note that the way you refer to data depends on what data inputs you have configured, therefor the examples might not work directly for you.
 
+## Create a simple table listing the last Catalyst Center Assurance alert per site, with human-readable timestamps.
+
+```
+index=catc alert 
+|  eval Time = strftime(_time, "%Y-%m-%d %H:%M") 
+|  stats latest("details.Assurance Issue Details") latest(Time) by "details.Device"
+```
 
 ## Predict graph for Paris ThousandEyes data
 
